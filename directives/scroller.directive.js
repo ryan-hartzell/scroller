@@ -2,7 +2,7 @@
  * Created by rhartzell on 4/21/16.
  */
 
-app.directive('sideScroller', function($log) {
+app.directive('sideScroller', function() {
     return {
         restrict: 'E',
         scope: {
@@ -11,7 +11,8 @@ app.directive('sideScroller', function($log) {
         link: function(scope, element, attr) {
 
             var length = 0;
-
+            scope.offset = element.parent().width();
+            
             for (var i = 0; i < scope.headlines.length; i++) {
                 length += scope.headlines[i].length;
             }
