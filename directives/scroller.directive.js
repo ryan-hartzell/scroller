@@ -17,7 +17,7 @@ app.directive('sideScroller', function() {
                 length += scope.headlines[i].length;
             }
 
-            scope.duration = 0.16 * (length + 50);
+            scope.duration = 0.15 * (length + 50);
         },
         templateUrl: 'directives/scroller.template.html'
     }
